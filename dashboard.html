@@ -1,36 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css files/dashboard.css">
 </head>
+
 <body>
-    <div class="header">
-        <img src="/images/profilePic.jpg" alt="profilePic">
-        <a href=""><i class="fa-solid fa-bell"></i></a>
+    <div class="top-container">
+
+        <div class="header">
+            <div class="header-side">
+                <img src="/images/profilePic.jpg" alt="profilePic">
+                <div class="header-side-discription">
+                    <p>Good Morning 🌞!</p>
+                    <h2>Aman Kumar</h2>
+                </div>
+            </div>
+            <a href=""><i class="fa-solid fa-bell"></i></a>
+        </div>
+    
+    
+        <div class="dashboard-searchArea">
+    
+            <div class="dashboard-searchBox">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="" id="searchBox" placeholder="Search for notes">
+            </div>
+    
+            <div class="dashboard-searchArea-btns">
+                <button id="all">All</button>
+                <button id="pinned">Pinned</button>
+                <button id="task">Task</button>
+                <button id="impNotes">Important Notes</button>
+                <button id="Work">Work</button>
+            </div>
+    
+        </div>
+    
+        <hr>
+
     </div>
 
+    <div class="dashboard-notesArea">
 
-    <div class="dashboard-searchArea">
 
-        <div class="dashboard-searchBox">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" name="" id="searchBox">
+           <div class="note">
+            <div class="note-info">
+                <p id="note-topic">Work</p>
+                <h2>Make projects</h2>
+            </div>
+
+            <div class="note-bottom">
+                <p>23 October , 02:00 pm</p>
+            </div>
         </div>
 
-        <div class="dashboard-searchArea-btns">
-            <button id="all">All</button>
-            <button id="pinned">Pinned</button>
-            <button id="task">Task</button>
-            <button id="impNotes">Important Notes</button>
-            <button id="Work">Work</button>
+           <div class="note">
+            <div class="note-info">
+                <p id="note-topic">Work</p>
+                <h2>Make projects</h2>
+            </div>
+
+            <div class="note-bottom">
+                <p>23 October , 02:00 pm</p>
+            </div>
         </div>
+
+           <div class="note">
+            <div class="note-info">
+                <p id="note-topic">Work</p>
+                <h2>Make projects</h2>
+            </div>
+
+            <div class="note-bottom">
+                <p>23 October , 02:00 pm</p>
+            </div>
+        </div>
+        
 
     </div>
 
+    <div class="footer">
+        <a id="dashboard-btn"><i class="fa-regular fa-house"></i></a>
+        <a id="add-btn"><i class="fa-solid fa-plus"></i></a>
+        <a id="todo-btn"><i class="fa-solid fa-clipboard-list"></i></a>
+        <a id="profile-btn"><i class="fa-regular fa-user"></i></a>
+    </div>
 
 </body>
+
 </html>
