@@ -1,0 +1,60 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* header ka css part */
+
+.header{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header img{
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    border: 1px solid black;
+
+}
+
+.header a{
+    font-size: 20px;
+}
+
+/* search area ka css part  */
+
+.dashboard-searchArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+.dashboard-searchBox{
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+#searchBox{
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.dashboard-searchArea-btns button{
+    height: 30px;
+    border: none;
+    padding: 10px;
+    background-color: ;
+}
