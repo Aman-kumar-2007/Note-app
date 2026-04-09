@@ -3,6 +3,7 @@
     margin: 0%;
 }
 
+
 body {
     background: linear-gradient(135deg, #4facfe, #00f2fe, #6a11cb);
     height: 100vh;
@@ -117,4 +118,5 @@ a {
         transform: translateY(0);
     }
 }
+
 

@@ -3,6 +3,16 @@
     padding: 0%;
 }
 
+/* 
+
+
+CSS FOR BOTH NOTE AND DASHBOARD
+
+
+ */
+
+
+
 :root {
     --bg: #020617;
     /* deep dark */
@@ -230,4 +240,64 @@ hr {
 
 .footer i {
     font-size: 30px;
+}
+
+
+/*             FOR NOTES               */
+
+
+.text-area{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#tittleArea{
+    padding: 20px;
+    font-size: 50px;
+    font-weight: 600;
+    height: 60px;
+    outline: none;
+    border: none;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: white;
+     resize: none;
+}
+
+#notesArea{
+     padding: 20px;
+    font-size: 15px;
+    height: 300px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: white;
+     resize: none;
+}
+
+#notesArea:focus{
+    border: none;
+}
+
+.add-btn-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#addnotebtn{
+    width: 90px;
+    height: 50px;
+    padding: 10px;
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+#addnotebtn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
