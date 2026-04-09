@@ -153,8 +153,8 @@ hr {
 
 .dashboard-notesArea {
       margin-top: 250px; /* adjust based on top-section height */
-  height: calc(100vh - 180px);
-    display: grid;
+      height: calc(100vh - 180px);
+      display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     padding: 10px 90px 30px 30px;
