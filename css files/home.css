@@ -1,0 +1,120 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background: linear-gradient(135deg, #4facfe, #00f2fe, #6a11cb);
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header part ka css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* border: 1px solid black; */
+    background: rgba(255, 255, 255 , 0.01);
+    /* backdrop-filter: blur(10px); */
+    color: white;
+}
+
+.header-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.header-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.header-btns button {
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #3d2d82;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+#login-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    z-index: 999;
+}
+
+#Register-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* dashboard body part ka css */
+
+.dashboard-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    gap: 40px;
+}
+
+.dashboard-headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 60px;
+}
+
+.dashboard-headline h1 {
+    font-size: 70px;
+    color: #3d2d82;
+}
+
+.dashboard-headline p {
+    font-size: 20px;
+    color: white;
+}
+
+.dashboard-body-btns button {
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #3d2d82;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+#getStarted-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.dashboard-headline {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
