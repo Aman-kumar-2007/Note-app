@@ -1,58 +1,77 @@
 const addNoteBtn = document.getElementById("addnotebtn");
 if (addNoteBtn) {
+
     addNoteBtn.addEventListener("click", () => {
         const title = document.getElementById("tittleArea").value;
         const content = document.getElementById("notesArea").value;
 
-        if (title === "" || content === "") {
+        if (title.trim() === "" || content.trim() === "") {
             alert("Fill all fields");
             return;
         }
 
-        const note = {
+        let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+        const selectedIndex = localStorage.getItem("selectedNote");
+
+        const newNote = {
             title: title,
             content: content,
             date: new Date().toLocaleString()
         };
 
-        const notes = JSON.parse(localStorage.getItem("notes")) || [];
-        notes.push(note);
+        if (selectedIndex !== null) {
+            notes[selectedIndex] = newNote;
+            localStorage.removeItem("selectedNote");
+        } else {
+
+            notes.push(newNote);
+        }
+
         localStorage.setItem("notes", JSON.stringify(notes));
+
         window.location.href = "dashboard.html";
-
     });
-
+    
 }
+
+
+
 
 const notesContainer = document.getElementById("dashboard-notesArea");
 
-let notes = JSON.parse(localStorage.getItem("notes")) || [];
+if (notesContainer) {
+    let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
-notes.forEach((note, index) => {
-    const a = document.createElement("a");
+    notes.forEach((note, index) => {
+        const div = document.createElement("div");
 
-    a.innerHTML = `
-        <div class = "note">
-             <div class="note-top">
-                    <div class="note-info">
-                        <p id="note-topic">Work</p>
-                        <h2>${note.title}</h2>
-                    </div>
-                    <div class="note-top-btn">
-                        <button onclick = "deleteNote(${index})"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-             </div>
-    
-                <div class="note-bottom">
-                    <p>${note.date}</p>
-                </div>
-          </div>      
-      `;
-    a.href = "/note.html";
-    a.style.textDecoration = "none";
-    a.id = 'noteBlock';
-    notesContainer.appendChild(a);
-});
+        div.innerHTML = `
+      <div class="note">
+        <div class="note-top">
+          <div class="note-info">
+            <p class="note-topic">Work</p>
+            <h2>${note.title}</h2>
+          </div>
+          <div class="note-top-btn">
+            <button onclick="deleteNote(${index})">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="note-bottom">
+          <p>${note.date}</p>
+           <button onclick = "editNode(${index})"><i class="fa-solid fa-pen-to-square"></i></button>
+        </div>
+      </div>
+    `;
+
+        div.classList.add("noteBlock");
+
+        notesContainer.appendChild(div);
+    });
+}
 
 
 function deleteNote(index) {
@@ -68,18 +87,20 @@ function deleteNote(index) {
 
 const search = document.getElementById("searchBox");
 
-search.addEventListener("input", () => {
-    let searchVal = search.value;
-    let notes = JSON.parse(localStorage.getItem("notes")) || [];
+if (search) {
+    search.addEventListener("input", () => {
+        let searchVal = search.value.toLowerCase();
 
-    const filtered = notes.filter(note =>
-        note.title.toLowerCase().includes(searchVal) ||
-        note.content.toLowerCase().includes(searchVal)
-    );
+        let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
-    displayNotes(filtered);
+        const filtered = notes.filter(note =>
+            note.title.toLowerCase().includes(searchVal) ||
+            note.content.toLowerCase().includes(searchVal)
+        );
 
-})
+        displayNotes(filtered);
+    });
+}
 
 function displayNotes(notesArray) {
     const notesContainer = document.getElementById("dashboard-notesArea");
@@ -87,46 +108,50 @@ function displayNotes(notesArray) {
     notesContainer.innerHTML = "";
 
     notesArray.forEach((note, index) => {
-        const a = document.createElement("a");
+        const div = document.createElement("div");
 
-        a.innerHTML = `
-        <div class = "note">
-             <div class="note-top">
-                    <div class="note-info">
-                        <p id="note-topic">Work</p>
-                        <h2>${note.title}</h2>
-                    </div>
-                    <div class="note-top-btn">
-                        <button onclick = "deleteNote(${index})"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-             </div>
-    
-                <div class="note-bottom">
-                    <p>${note.date}</p>
-                </div>
-          </div>      
-      `;
-        a.href = "/note.html";
-        a.style.textDecoration = "none";
-        a.id = 'noteBlock';
-        notesContainer.appendChild(a);
+        div.innerHTML = `
+      <div class="note">
+        <div class="note-top">
+          <div class="note-info">
+            <p class="note-topic">Work</p>
+            <h2>${note.title}</h2>
+          </div>
+          <div class="note-top-btn">
+            <button onclick="deleteNote(${index})">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="note-bottom">
+          <p>${note.date}</p>
+           <button><i class="fa-solid fa-pen-to-square"></i></button>
+        </div>
+      </div>
+    `;
+
+        div.classList.add("noteBlock");
+
+        notesContainer.appendChild(div);
     });
 }
 
-// displayNotes(notes);
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   let notes = JSON.parse(localStorage.getItem("notes") || "[]");
-//   displayNotes(notes);
-// });
-
-const noteBlock = document.getElementById("noteBlock");
-
-noteBlock.addEventListener("click", () => {
+function editNode(index) {
+    localStorage.setItem("selectedNote", index);
     window.location.href = "note.html";
+}
 
-    const title = document.getElementById("tittleArea").value;
-    const content = document.getElementById("notesArea").value;
+if (addNoteBtn) {
+    const selectedIndex = localStorage.getItem("selectedNote");
+    const notes = JSON.parse(localStorage.getItem("notes")) || [];
 
-    console.log(title);
-})
+    if (selectedIndex !== null) {
+        const note = notes[selectedIndex];
+
+        document.getElementById("tittleArea").value = note.title;
+        document.getElementById("notesArea").value = note.content;
+    }
+
+}
+

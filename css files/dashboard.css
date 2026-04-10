@@ -11,7 +11,9 @@ CSS FOR BOTH NOTE AND DASHBOARD
 
  */
 
-
+a{
+    text-decoration: none;
+}
 
 :root {
     --bg: #020617;
@@ -198,7 +200,6 @@ hr {
     transform: translateY(-6px);
     border-color: var(--primary);
     box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
-    cursor: pointer;
 }
 
 .note-info {
@@ -209,7 +210,7 @@ hr {
     color: var(--text);
 }
 
-.note #note-topic {
+.note .note-topic {
     font-size: 14px;
     color: var(--subtext);
 
@@ -221,13 +222,24 @@ hr {
     height: 30px;
     display: flex;
     padding: 10px;
+    justify-content: space-between;
     align-items: center;
-    /* border: 1px solid black; */
     border-radius: 0px 0px 17px 17px;
-
     background: linear-gradient(135deg, #0891b2, #2563eb);
     color: white
 }
+
+.note-bottom button{
+    background : transparent;
+    font-size: 20px;
+    color: var(--subtext);
+    border: none;
+}
+
+.note-bottom button:hover{
+    cursor: pointer;
+}
+
 
 /* footer part ka css */
 
