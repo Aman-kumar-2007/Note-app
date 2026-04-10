@@ -14,25 +14,24 @@ if (addNoteBtn) {
 
         const selectedIndex = localStorage.getItem("selectedNote");
 
-        const newNote = {
+        const note = {
             title: title,
             content: content,
             date: new Date().toLocaleString()
         };
 
         if (selectedIndex !== null) {
-            notes[selectedIndex] = newNote;
+            notes[selectedIndex] = note;
             localStorage.removeItem("selectedNote");
         } else {
-
-            notes.push(newNote);
+            notes.push(note);
         }
 
         localStorage.setItem("notes", JSON.stringify(notes));
 
         window.location.href = "dashboard.html";
     });
-    
+
 }
 
 

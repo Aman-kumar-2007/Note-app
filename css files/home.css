@@ -101,9 +101,9 @@ a {
 #getStarted-btn:hover {
     transform: scale(1.1);
     cursor: pointer;
-}
+} 
 
-.dashboard-headline {
+ .dashboard-headline {
     animation: fadeIn 1s ease-in-out;
 }
 
