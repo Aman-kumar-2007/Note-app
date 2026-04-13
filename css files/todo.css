@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
 }
@@ -18,7 +18,7 @@
 }
 
 
-body{
+body {
     background: radial-gradient(circle at top, #0f172a, #020617);
 }
 
@@ -62,4 +62,52 @@ body{
 
 .header i {
     color: var(--subtext);
+}
+
+.todo-body {
+    color: white;
+    padding: 30px;
+}
+
+.todo-search-area {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.todo-search-area input {
+    border: none;
+    color: white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.todo-search-area button {
+    border: none;
+    padding: 10px;
+    background: transparent;
+    color: var(--subtext);
+    border: 1px solid var(--border);
+    height: 40px;
+    width: 60px;
+}
+
+.task-box-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 20px;
 }
