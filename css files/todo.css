@@ -85,6 +85,7 @@ body {
     height: 40px;
     width: 100%;
     font-size: 16px;
+    padding: 10px;
 }
 
 .todo-search-area button {
@@ -110,4 +111,16 @@ body {
     justify-content: space-between;
     margin-top: 20px;
     font-size: 20px;
+}
+
+.deleteBtn {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    color: var(--subtext);
+    border: 1px solid var(--border);
+}
+
+hr {
+    margin: 30px 30px 30px 30px;
 }
