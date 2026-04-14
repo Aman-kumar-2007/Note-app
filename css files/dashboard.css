@@ -11,7 +11,7 @@ CSS FOR BOTH NOTE AND DASHBOARD
 
  */
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -36,15 +36,17 @@ body {
 
 /* header ka css part */
 
-.top-container{
+.top-container {
     position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-  background: #020617; /* same as bg */
-  z-index: 1000;
+    background: #020617;
+    /* same as bg */
+    z-index: 1000;
 }
+
 .header {
     background: rgba(2, 6, 23, 0.6);
     backdrop-filter: blur(12px);
@@ -154,9 +156,10 @@ hr {
 /* notes Area ka css */
 
 .dashboard-notesArea {
-      margin-top: 250px; /* adjust based on top-section height */
-      height: calc(100vh - 180px);
-      display: grid;
+    margin-top: 250px;
+    /* adjust based on top-section height */
+    height: calc(100vh - 180px);
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     padding: 10px 90px 30px 30px;
@@ -178,13 +181,13 @@ hr {
 
 }
 
-.note-top{
+.note-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.note-top button{
+.note-top button {
     background: transparent;
     border: none;
     padding: 10px;
@@ -192,7 +195,7 @@ hr {
     color: var(--subtext);
 }
 
-.note-top button:hover{
+.note-top button:hover {
     cursor: pointer;
 }
 
@@ -229,14 +232,14 @@ hr {
     color: white
 }
 
-.note-bottom button{
-    background : transparent;
+.note-bottom button {
+    background: transparent;
     font-size: 20px;
     color: var(--subtext);
     border: none;
 }
 
-.note-bottom button:hover{
+.note-bottom button:hover {
     cursor: pointer;
 }
 
@@ -276,13 +279,13 @@ hr {
 /*             FOR NOTES               */
 
 
-.text-area{
+.text-area {
     padding: 30px;
     display: flex;
     flex-direction: column;
 }
 
-#tittleArea{
+#tittleArea {
     padding: 20px;
     font-size: 50px;
     font-weight: 600;
@@ -291,11 +294,11 @@ hr {
     border: none;
     background: radial-gradient(circle at top, #0f172a, #020617);
     color: white;
-     resize: none;
+    resize: none;
 }
 
-#notesArea{
-     padding: 20px;
+#notesArea {
+    padding: 20px;
     font-size: 15px;
     height: 300px;
     outline: none;
@@ -303,21 +306,21 @@ hr {
     border-radius: 20px;
     background: radial-gradient(circle at top, #0f172a, #020617);
     color: white;
-     resize: none;
+    resize: none;
 }
 
-#notesArea:focus{
+#notesArea:focus {
     border: none;
 }
 
-.add-btn-area{
+.add-btn-area {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
 
-#addnotebtn{
+#addnotebtn {
     width: 90px;
     height: 50px;
     padding: 10px;
@@ -327,39 +330,85 @@ hr {
     border-radius: 15px;
 }
 
-#addnotebtn:hover{
+#addnotebtn:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
 
 @media (max-width: 768px) {
-  
-#tittleArea{
-    font-size: 40px;
-    height: 50px;
+
+    .header {
+        padding: 10px 10px;
+    }
+
+
+    .header-side {
+        gap: 15px;
+    }
+
+    .header a {
+        font-size: 18px;
+    }
+
+    .dashboard-searchArea {
+        padding: 20px 20px 20px 20px;
+    }
+
+    .dashboard-searchArea-btns button {
+        padding: 15px;
+    }
+
+
+    hr {
+        margin: 0px 20px 20px 20px;
+    }
+
+
+
+
+    #tittleArea {
+        font-size: 40px;
+        height: 50px;
+    }
+
+    #notesArea {
+        height: 250px;
+    }
+
+    .dashboard-notesArea {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 10px 0px 10px 10px;
+        padding-bottom: 90px;
+    }
+
+    .note {
+        height: 150px;
+        width: 170px;
+    }
+
+
+    .note-info {
+        padding: 10px;
+    }
+
+    .note h2 {
+        font-size: 17px;
+    }
+
+    .note .note-topic {
+        font-size: 11px;
+    }
+
+
+    .note-bottom {
+        height: 25px;
+        padding: 7px;
+    }
+
+    .note-bottom button {
+        font-size: 18px;
+    }
+
 }
-
-#notesArea{
-    height: 250px;
-}
-
-.dashboard-notesArea {
-      margin-top: 250px; /* adjust based on top-section height */
-      height: calc(100vh - 180px);
-      display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-    padding-bottom: 90px;
-}
-
-.note {
-    border-radius: 20px;
-    height: 150px;
-    width: 170px;
-    padding: 0.1px;
-}
-
-
-}
-
