@@ -333,5 +333,33 @@ hr {
 }
 
 
+@media (max-width: 768px) {
+  
+#tittleArea{
+    font-size: 40px;
+    height: 50px;
+}
 
+#notesArea{
+    height: 250px;
+}
+
+.dashboard-notesArea {
+      margin-top: 250px; /* adjust based on top-section height */
+      height: calc(100vh - 180px);
+      display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding-bottom: 90px;
+}
+
+.note {
+    border-radius: 20px;
+    height: 150px;
+    width: 170px;
+    padding: 0.1px;
+}
+
+
+}
 
