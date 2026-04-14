@@ -124,3 +124,34 @@ body {
 hr {
     margin: 30px 30px 30px 30px;
 }
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+    background: rgba(2, 6, 23, 0.6);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border);
+    height: 40px;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: var(--text);
+
+}
+
+.footer a:hover {
+    cursor: pointer;
+}
+
+.footer i {
+    font-size: 30px;
+}
+

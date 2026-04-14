@@ -120,3 +120,22 @@ a {
 }
 
 
+@media (max-width: 768px) {
+
+.dashboard-headline h1 {
+    font-size: 40px;
+}
+
+.dashboard-headline {
+    line-height: 40px;
+}
+
+.dashboard-headline p {
+    font-size: 15px;
+}
+
+.dashboard-body {
+    gap: 20px;
+}
+
+}
