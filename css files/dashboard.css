@@ -378,17 +378,17 @@ hr {
 
     .dashboard-notesArea {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 20px;     
-        column-gap: 20px;  
-        padding: 10px 0px 10px 10px;
-    height: auto;
-}
+        row-gap: 20px;
+        column-gap: 10px;
+        padding: 10px 10px 10px 10px;
+        height: auto;
+        /* border: 1px solid white; */
     }
 
-    .noteBlock{
+    .noteBlock {
         height: 150px;
         width: 170px;
-         /* height: auto; */
+        /* height: auto; */
         margin: 0%;
     }
 
@@ -423,11 +423,34 @@ hr {
         padding: 7px;
     }
 
-    .note-bottom p{
+    .note-bottom p {
         font-size: 12px;
     }
+
     .note-bottom button {
         font-size: 18px;
     }
+
+    .footer {
+    padding: 10px 0px 10px 0px;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: var(--text);
+
+}
+
+.footer a:hover {
+    cursor: pointer;
+}
+
+.footer i {
+    font-size: 30px;
+}
 
 }
