@@ -171,12 +171,13 @@ hr {
     background: rgba(30, 41, 59, 0.6);
     border: 1px solid var(--border);
     backdrop-filter: blur(10px);
-
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    height: 220px;
-    width: 250px;
+    width: 100%;
+    height: 100%;
+    max-height: 220px;
+    max-width: 250px;
     padding: 0.1px;
 
 }
@@ -255,7 +256,6 @@ hr {
     backdrop-filter: blur(12px);
     border-top: 1px solid var(--border);
     height: 40px;
-
     position: fixed;
     bottom: 0;
     left: 0;
@@ -378,16 +378,32 @@ hr {
 
     .dashboard-notesArea {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        row-gap: 20px;     
+        column-gap: 20px;  
         padding: 10px 0px 10px 10px;
-        padding-bottom: 90px;
+    height: auto;
+}
+    }
+
+    .noteBlock{
+        height: 150px;
+        width: 170px;
+         /* height: auto; */
+        margin: 0%;
     }
 
     .note {
         height: 150px;
-        width: 170px;
+        /* height: auto; */
     }
 
+    .note-info h2 {
+        width: 100px;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
     .note-info {
         padding: 10px;
@@ -407,6 +423,9 @@ hr {
         padding: 7px;
     }
 
+    .note-bottom p{
+        font-size: 12px;
+    }
     .note-bottom button {
         font-size: 18px;
     }
